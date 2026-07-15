@@ -1,0 +1,7 @@
+@use "base/01_normalize" as normalize;
+@use "global/fonts";
+@use "global/global";
+@use "../../.cache/svg";
+
+// Подключайте стили компонентов явно:
+// @use '../components/bem-blocks/button/button';
