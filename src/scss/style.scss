@@ -8,6 +8,7 @@
 @use "../../.cache/svg";
 @use "../components/page-blocks/header";
 @use "../components/page-blocks/hero";
+@use "../components/page-blocks/services";
 
 // Подключайте стили компонентов явно:
 // @use '../components/bem-blocks/button/button';
