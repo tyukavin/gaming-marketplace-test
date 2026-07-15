@@ -15,7 +15,32 @@ body {
 }
 
 body {
+  min-width: 1280px;
   font-size: 1rem;
+  font-family: var(--font-family-primary);
+  font-weight: 500;
+  color: var(--color-text);
+  background-color: var(--color-page-background);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 1200px;
+  margin-inline: auto;
 }
 
 ul,

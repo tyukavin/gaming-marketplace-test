@@ -1,3 +1,6 @@
-// Пример подключения локального шрифта:
-// @use '../base/mixins' as mixins;
-// @include mixins.font-face('Inter', 'inter-regular', 400);
+@use "../base/mixins" as mixins;
+@include mixins.font-face("Montserrat", "montserrat-500", 500);
+@include mixins.font-face("Montserrat", "montserrat-600", 600);
+@include mixins.font-face("Montserrat", "montserrat-700", 700);
+@include mixins.font-face("Montserrat", "montserrat-800", 800);
+@include mixins.font-face("Montserrat", "montserrat-900", 900);
