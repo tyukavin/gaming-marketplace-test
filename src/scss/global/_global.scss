@@ -38,6 +38,14 @@ img {
   max-width: 100%;
 }
 
+.main {
+  width: var(--page-width);
+  min-height: calc(100vh - 80px);
+  padding-top: 16px;
+  margin-inline: auto;
+  background-color: var(--color-surface);
+}
+
 .container {
   width: 1200px;
   margin-inline: auto;

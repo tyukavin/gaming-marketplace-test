@@ -51,5 +51,8 @@
     "node": "24.15.0",
     "npm": "11.12.1"
   },
-  "packageManager": "npm@11.12.1"
+  "packageManager": "npm@11.12.1",
+  "dependencies": {
+    "swiper": "^14.0.5"
+  }
 }

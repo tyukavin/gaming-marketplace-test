@@ -1,9 +1,13 @@
 @use "base/01_normalize" as normalize;
+@use "../../node_modules/swiper/swiper.css";
+@use "../../node_modules/swiper/modules/effect-fade.css";
+@use "vendor/nebo.css";
 @use "global/fonts";
 @use "global/tokens";
 @use "global/global";
 @use "../../.cache/svg";
 @use "../components/page-blocks/header";
+@use "../components/page-blocks/hero";
 
 // Подключайте стили компонентов явно:
 // @use '../components/bem-blocks/button/button';
