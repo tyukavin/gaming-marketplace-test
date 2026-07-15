@@ -1,0 +1,97 @@
+.product-showcase {
+    margin-top: 16px;
+}
+
+.product-section {
+    height: 346px;
+
+    & + & {
+        margin-top: 16px;
+    }
+
+    & + &--spaced {
+        margin-top: 43px;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 34px;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: -0.5px;
+        color: #363636;
+    }
+
+    &__categories {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    &__category-button {
+        gap: 6px;
+        height: 34px;
+        padding-inline: 14px;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 20px;
+        color: var(--color-text-muted);
+        white-space: nowrap;
+        background-color: var(--color-page-background);
+        border-radius: 10px;
+
+        &--active {
+            color: #fff;
+            background-color: var(--color-accent);
+        }
+
+        &:focus-visible {
+            outline: 2px solid #76829b;
+            outline-offset: 2px;
+        }
+    }
+
+    &__category-icon {
+        flex: 0 0 14px;
+        width: 14px;
+        height: 14px;
+    }
+
+    &__all-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 133px;
+        height: 34px;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 20px;
+        color: var(--color-text);
+        text-decoration: none;
+        background-color: var(--color-page-background);
+        border-radius: 10px;
+
+        &:focus-visible {
+            outline: 2px solid #76829b;
+            outline-offset: 2px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 16px;
+        padding: 0;
+        margin: 16px 0 0;
+        list-style: none;
+    }
+}

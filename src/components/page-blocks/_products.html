@@ -1,0 +1,158 @@
+<div class="product-showcase container">
+    <section class="product-section" aria-labelledby="popular-products-title">
+        <header class="product-section__header">
+            <h2 id="popular-products-title" class="product-section__title">Популярные товары</h2>
+            <ul class="product-section__categories">
+                <li class="product-section__category-item">
+                    <button class="product-section__category-button product-section__category-button--active button-reset"
+                        type="button"
+                        aria-pressed="true">
+                        <img class="product-section__category-icon"
+                            src="img/icons/category-donate.svg"
+                            width="14"
+                            height="14"
+                            alt="">
+                        Донат
+                    </button>
+                </li>
+                <li class="product-section__category-item">
+                    <button class="product-section__category-button button-reset"
+                        type="button"
+                        aria-pressed="false">
+                        <img class="product-section__category-icon"
+                            src="img/icons/category-subscriptions.svg"
+                            width="14"
+                            height="14"
+                            alt="">
+                        Подписки
+                    </button>
+                </li>
+                <li class="product-section__category-item">
+                    <button class="product-section__category-button button-reset"
+                        type="button"
+                        aria-pressed="false">
+                        <img class="product-section__category-icon"
+                            src="img/icons/category-items.svg"
+                            width="14"
+                            height="14"
+                            alt="">
+                        Предметы
+                    </button>
+                </li>
+                <li class="product-section__category-item">
+                    <button class="product-section__category-button button-reset"
+                        type="button"
+                        aria-pressed="false">
+                        <img class="product-section__category-icon"
+                            src="img/icons/category-accounts.svg"
+                            width="14"
+                            height="14"
+                            alt="">
+                        Аккаунты
+                    </button>
+                </li>
+                <li class="product-section__category-item">
+                    <button class="product-section__category-button button-reset"
+                        type="button"
+                        aria-pressed="false">
+                        <img class="product-section__category-icon"
+                            src="img/icons/category-keys.svg"
+                            width="14"
+                            height="14"
+                            alt="">
+                        Ключи
+                    </button>
+                </li>
+                <li class="product-section__category-item">
+                    <button class="product-section__category-button button-reset"
+                        type="button"
+                        aria-pressed="false">
+                        <img class="product-section__category-icon"
+                            src="img/icons/category-currency.svg"
+                            width="14"
+                            height="14"
+                            alt="">
+                        Игровая валюта
+                    </button>
+                </li>
+                <li class="product-section__category-item">
+                    <button class="product-section__category-button button-reset"
+                        type="button"
+                        aria-pressed="false">
+                        <img class="product-section__category-icon"
+                            src="img/icons/category-other.svg"
+                            width="14"
+                            height="14"
+                            alt="">
+                        Другое
+                    </button>
+                </li>
+            </ul>
+        </header>
+        <ul class="product-section__list">
+            <li class="product-section__item">
+                @@include('../bem-blocks/product-card/_product-card.html')
+            </li>
+            <li class="product-section__item">
+                @@include('../bem-blocks/product-card/_product-card.html')
+            </li>
+            <li class="product-section__item">
+                @@include('../bem-blocks/product-card/_product-card.html')
+            </li>
+            <li class="product-section__item">
+                @@include('../bem-blocks/product-card/_product-card.html')
+            </li>
+            <li class="product-section__item">
+                @@include('../bem-blocks/product-card/_product-card.html')
+            </li>
+        </ul>
+    </section>
+
+    <section class="product-section" aria-labelledby="recommended-products-title">
+        <header class="product-section__header">
+            <h2 id="recommended-products-title" class="product-section__title">Рекомендованные товары</h2>
+            <a class="product-section__all-link" href="#">Показать все</a>
+        </header>
+        <ul class="product-section__list">
+            <li class="product-section__item">
+                @@include('../bem-blocks/product-card/_product-card.html')
+            </li>
+            <li class="product-section__item">
+                @@include('../bem-blocks/product-card/_product-card.html')
+            </li>
+            <li class="product-section__item">
+                @@include('../bem-blocks/product-card/_product-card.html')
+            </li>
+            <li class="product-section__item">
+                @@include('../bem-blocks/product-card/_product-card.html')
+            </li>
+            <li class="product-section__item">
+                @@include('../bem-blocks/product-card/_product-card.html')
+            </li>
+        </ul>
+    </section>
+
+    <section class="product-section product-section--spaced" aria-labelledby="other-products-title">
+        <header class="product-section__header">
+            <h2 id="other-products-title" class="product-section__title">Другие товары</h2>
+            <a class="product-section__all-link" href="#">Показать все</a>
+        </header>
+        <ul class="product-section__list">
+            <li class="product-section__item">
+                @@include('../bem-blocks/product-card/_product-card.html')
+            </li>
+            <li class="product-section__item">
+                @@include('../bem-blocks/product-card/_product-card.html')
+            </li>
+            <li class="product-section__item">
+                @@include('../bem-blocks/product-card/_product-card.html')
+            </li>
+            <li class="product-section__item">
+                @@include('../bem-blocks/product-card/_product-card.html')
+            </li>
+            <li class="product-section__item">
+                @@include('../bem-blocks/product-card/_product-card.html')
+            </li>
+        </ul>
+    </section>
+</div>

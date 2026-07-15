@@ -9,6 +9,8 @@
 @use "../components/page-blocks/header";
 @use "../components/page-blocks/hero";
 @use "../components/page-blocks/services";
+@use "../components/bem-blocks/product-card/product-card";
+@use "../components/page-blocks/products";
 
 // Подключайте стили компонентов явно:
 // @use '../components/bem-blocks/button/button';
