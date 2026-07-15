@@ -18,38 +18,41 @@ const stylesDev = series(svgCss, stylesDevelopment);
 const stylesBuild = series(svgCss, stylesProduction);
 
 const compileDevelopment = parallel(
-  markup,
-  staticAssets,
-  fonts,
-  scriptsDevelopment,
-  stylesDev,
+    markup,
+    staticAssets,
+    fonts,
+    scriptsDevelopment,
+    stylesDev,
 );
 
 const compileProduction = parallel(
-  markup,
-  staticAssets,
-  fonts,
-  scriptsProduction,
-  stylesBuild,
+    markup,
+    staticAssets,
+    fonts,
+    scriptsProduction,
+    stylesBuild,
 );
 
 function watchFiles() {
-  watch(["src/**/*.html", "src/**/*.json"], html);
-  watch("src/**/*.php", php);
-  watch(["src/scss/**/*.scss", "src/components/**/*.scss"], stylesDevelopment);
-  watch("src/js/**/*.js", scriptsDevelopment);
-  watch("src/img/**/*", images);
-  watch("src/svg/css/**/*.svg", stylesDev);
-  watch("src/svg/sprite/**/*.svg", sprite);
-  watch("src/fonts/**/*", fonts);
+    watch(["src/**/*.html", "src/**/*.json"], html);
+    watch("src/**/*.php", php);
+    watch(
+        ["src/scss/**/*.scss", "src/components/**/*.scss"],
+        stylesDevelopment,
+    );
+    watch("src/js/**/*.js", scriptsDevelopment);
+    watch("src/img/**/*", images);
+    watch("src/svg/css/**/*.svg", stylesDev);
+    watch("src/svg/sprite/**/*.svg", sprite);
+    watch("src/fonts/**/*", fonts);
 }
 
 const build = series(clean, compileProduction);
 const dev = series(clean, compileDevelopment, parallel(serveHtml, watchFiles));
 const devPhp = series(
-  clean,
-  compileDevelopment,
-  parallel(servePhp, watchFiles),
+    clean,
+    compileDevelopment,
+    parallel(servePhp, watchFiles),
 );
 
 exports.clean = clean;
