@@ -1,1 +1,45 @@
-<header class="header"></header>
+<header class="site-header">
+    <div class="site-header__container container">
+        <div class="site-header__logo" aria-hidden="true"></div>
+
+        <button class="site-header__catalog-button button-reset"
+            type="button"
+            aria-haspopup="true"
+            aria-expanded="false">
+            <img class="site-header__catalog-icon"
+                src="img/icons/catalog.svg"
+                width="20"
+                height="20"
+                alt="">
+            <span>Каталог</span>
+        </button>
+
+        <form class="site-header__search" role="search">
+            <div class="site-header__search-field">
+                <label class="visually-hidden" for="site-search">Поиск по каталогу</label>
+                <input id="site-search"
+                    class="site-header__search-input"
+                    type="search"
+                    name="search"
+                    placeholder="Игра, приложение или услуга...">
+                <button class="site-header__favorite-button button-reset"
+                    type="button"
+                    aria-label="Избранное">
+                    <img src="img/icons/favorite.svg" width="14" height="13" alt="">
+                </button>
+            </div>
+
+            <button class="site-header__search-button button-reset"
+                type="submit"
+                aria-label="Найти">
+                <img src="img/icons/search.svg" width="20" height="20" alt="">
+            </button>
+        </form>
+
+        <button class="site-header__profile-button button-reset"
+            type="button"
+            aria-label="Профиль">
+            <img src="img/icons/profile.svg" width="20" height="20" alt="">
+        </button>
+    </div>
+</header>

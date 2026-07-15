@@ -3,6 +3,7 @@
 @use "global/tokens";
 @use "global/global";
 @use "../../.cache/svg";
+@use "../components/page-blocks/header";
 
 // Подключайте стили компонентов явно:
 // @use '../components/bem-blocks/button/button';
