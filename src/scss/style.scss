@@ -11,6 +11,9 @@
 @use "../components/page-blocks/services";
 @use "../components/bem-blocks/product-card/product-card";
 @use "../components/page-blocks/products";
+@use "../components/bem-blocks/review-card/review-card";
+@use "../components/page-blocks/reviews";
+@use "../components/page-blocks/footer";
 
 // Подключайте стили компонентов явно:
 // @use '../components/bem-blocks/button/button';

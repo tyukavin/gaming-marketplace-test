@@ -1,0 +1,130 @@
+.review-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 269px;
+    padding: 21px;
+    background-color: var(--color-surface);
+    border: 1px solid #f2f4f6;
+    border-radius: 24px;
+    box-shadow: var(--shadow-card);
+
+    &__header {
+        display: flex;
+        align-items: center;
+        height: 48px;
+    }
+
+    &__avatar {
+        flex: 0 0 48px;
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    &__author {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-left: 12px;
+    }
+
+    &__author-name {
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 16px;
+        color: var(--color-text);
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        height: 22px;
+    }
+
+    &__stars {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 1px;
+        color: #000;
+    }
+
+    &__rating-value {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 21px;
+        color: var(--color-text);
+    }
+
+    &__date {
+        margin-left: auto;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 20px;
+        color: #9ca3af;
+        white-space: nowrap;
+    }
+
+    &__quote {
+        display: flex;
+        align-items: center;
+        flex: 1 1 auto;
+        padding: 16px;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        color: #6b7280;
+        background-color: #f1f2f4;
+        border-radius: 16px;
+    }
+
+    &__product {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-height: 52px;
+        color: var(--color-text);
+        text-decoration: none;
+
+        &:focus-visible {
+            outline: 2px solid #76829b;
+            outline-offset: 3px;
+            border-radius: 12px;
+        }
+    }
+
+    &__product-image {
+        flex: 0 0 64px;
+        width: 64px;
+        height: 52px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    &__product-title {
+        flex: 1 1 auto;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 18px;
+        text-align: center;
+    }
+
+    &__product-price {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 55px;
+        width: 55px;
+        height: 32px;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 18px;
+        color: #fff;
+        background-color: var(--color-accent);
+        border-radius: 10px;
+    }
+}
