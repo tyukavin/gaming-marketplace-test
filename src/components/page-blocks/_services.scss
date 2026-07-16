@@ -81,6 +81,13 @@
                 border-color: #fff;
             }
         }
+
+        &--more:is(:hover, :focus-visible) {
+            .services__service-icon-wrapper {
+                background-color: #e3e7ed;
+                border-color: #cfd6e0;
+            }
+        }
     }
 
     &__service-icon-wrapper,
@@ -208,6 +215,11 @@
         line-height: 18px;
         background-color: rgb(38 139 243 / 10%);
         border-radius: 8px;
+        transition: background-color 180ms ease;
+
+        &:hover {
+            background-color: rgb(38 139 243 / 18%);
+        }
 
         &:focus-visible {
             outline: 2px solid #76829b;
@@ -225,6 +237,7 @@
         height: 64px;
         background-color: var(--color-page-background);
         border-radius: 12px;
+        transition: box-shadow 180ms ease;
 
         &--login {
             padding-inline: 20px;
@@ -233,6 +246,10 @@
         &--amount {
             justify-content: space-between;
             padding-inline: 16px;
+        }
+
+        &:hover {
+            box-shadow: inset 0 0 0 1px #dfe4eb;
         }
 
         &:focus-within {
@@ -283,6 +300,11 @@
         color: #fff;
         background-color: #a0a8b5;
         border-radius: 6px;
+        transition: background-color 180ms ease;
+
+        &:hover {
+            background-color: #7f8998;
+        }
 
         &:focus-visible {
             outline: 2px solid #76829b;
@@ -332,9 +354,18 @@
             color 180ms ease,
             background-color 180ms ease;
 
+        &:not(.services__currency-button--active):hover {
+            color: #363636;
+            background-color: #dce1e7;
+        }
+
         &--active {
             color: #fff;
             background-color: var(--color-accent);
+
+            &:hover {
+                background-color: #262626;
+            }
         }
 
         &:focus-visible {
@@ -353,6 +384,11 @@
         color: #fff;
         background-color: var(--color-accent);
         border-radius: 12px;
+        transition: background-color 180ms ease;
+
+        &:hover {
+            background-color: #262626;
+        }
 
         &:focus-visible {
             outline: 2px solid #76829b;

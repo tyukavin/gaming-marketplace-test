@@ -43,6 +43,11 @@
         flex: 0 0 40px;
         height: 30px;
         border-radius: 50%;
+        transition: background-color 180ms ease;
+
+        &:hover {
+            background-color: #e2e6ec;
+        }
 
         &:focus-visible {
             outline: 2px solid #76829b;
@@ -71,6 +76,11 @@
         border: 0;
         border-radius: 12px;
         opacity: 1;
+        transition: background-color 180ms ease;
+
+        &:hover {
+            background-color: rgb(255 255 255 / 75%);
+        }
 
         &:focus-visible {
             outline: 2px solid #fff;

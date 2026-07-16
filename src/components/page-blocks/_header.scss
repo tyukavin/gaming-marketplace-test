@@ -30,6 +30,11 @@
         color: #fff;
         background-color: var(--color-accent);
         border-radius: var(--radius-control);
+        transition: background-color 180ms ease;
+
+        &:hover {
+            background-color: #262626;
+        }
     }
 
     &__catalog-icon {
@@ -53,6 +58,15 @@
         min-width: 0;
         background-color: var(--color-surface);
         border-radius: 8px;
+        transition: box-shadow 180ms ease;
+
+        &:hover {
+            box-shadow: inset 0 0 0 1px #dfe4eb;
+        }
+
+        &:focus-within {
+            box-shadow: inset 0 0 0 2px #76829b;
+        }
     }
 
     &__search-input {
@@ -84,11 +98,22 @@
         margin-right: 4px;
         background-color: #eff1f5;
         border-radius: 6px;
+        transition: background-color 180ms ease;
+
+        &:hover {
+            background-color: #e0e4ea;
+        }
     }
 
     &__search-button {
         flex: 0 0 44px;
         background-color: transparent;
+        border-radius: 8px;
+        transition: background-color 180ms ease;
+
+        &:hover {
+            background-color: rgb(255 255 255 / 16%);
+        }
     }
 
     &__profile-button {
@@ -97,6 +122,11 @@
         margin-left: 80px;
         background-color: var(--color-control);
         border-radius: var(--radius-control);
+        transition: background-color 180ms ease;
+
+        &:hover {
+            background-color: #e2e6ec;
+        }
     }
 
     &__catalog-button,

@@ -41,6 +41,7 @@
         line-height: 20px;
         color: #363636;
         text-decoration: none;
+        transition: background-color 180ms ease;
 
         &--active {
             font-weight: 600;
@@ -111,6 +112,7 @@
         line-height: 18px;
         color: #4b5563;
         text-decoration: none;
+        transition: color 180ms ease;
 
         &:hover {
             color: #000;

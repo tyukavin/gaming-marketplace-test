@@ -40,6 +40,7 @@
         line-height: 18px;
         color: #374151;
         text-decoration: none;
+        transition: color 180ms ease;
     }
 
     &__contacts {
@@ -60,6 +61,14 @@
         width: 34px;
         height: 34px;
         border-radius: 10px;
+        transition:
+            opacity 180ms ease,
+            transform 180ms ease;
+
+        &:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
+        }
 
         &:focus-visible {
             outline: 2px solid #76829b;
@@ -133,6 +142,7 @@
         line-height: 17px;
         color: #6b7486;
         text-decoration: none;
+        transition: color 180ms ease;
     }
 
     &__main-link,
@@ -145,6 +155,16 @@
             outline: 2px solid #76829b;
             outline-offset: 3px;
             border-radius: 2px;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-footer__social-link {
+        transition: none;
+
+        &:hover {
+            transform: none;
         }
     }
 }

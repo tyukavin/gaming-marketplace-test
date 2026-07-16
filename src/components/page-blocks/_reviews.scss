@@ -45,6 +45,11 @@
         text-decoration: none;
         background-color: var(--color-page-background);
         border-radius: 10px;
+        transition: background-color 180ms ease;
+
+        &:hover {
+            background-color: #e6e9ee;
+        }
 
         &:focus-visible {
             outline: 2px solid #76829b;
