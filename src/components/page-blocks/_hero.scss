@@ -1,6 +1,6 @@
 .hero-slider {
     position: relative;
-    height: 263px;
+    height: clamp(180px, 21.92vw, 263px);
 
     &__swiper,
     &__slide,
@@ -90,5 +90,26 @@
 
     .swiper-pagination-bullet-active {
         background-color: #fff;
+    }
+}
+
+@media (width <= 767px) {
+    .hero-slider {
+        &__controls {
+            width: 82px;
+        }
+
+        &__button {
+            flex-basis: 36px;
+        }
+
+        &__pagination {
+            right: 12px;
+            bottom: 12px;
+        }
+
+        .swiper-pagination-bullet {
+            width: 14px;
+        }
     }
 }

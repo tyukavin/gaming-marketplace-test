@@ -66,3 +66,34 @@
         list-style: none;
     }
 }
+
+@media (width <= 1199px) {
+    .reviews {
+        height: auto;
+        margin-top: 48px;
+        padding-bottom: 32px;
+
+        &__list {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            margin-top: 32px;
+        }
+    }
+}
+
+@media (width <= 767px) {
+    .reviews {
+        &__header {
+            height: auto;
+        }
+
+        &__all-link {
+            flex: 0 0 116px;
+            width: 116px;
+        }
+
+        &__list {
+            grid-template-columns: 1fr;
+            margin-top: 24px;
+        }
+    }
+}

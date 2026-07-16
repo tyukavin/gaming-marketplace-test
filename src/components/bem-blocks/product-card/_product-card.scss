@@ -126,3 +126,13 @@
         }
     }
 }
+
+@media (width <= 479px) {
+    .product-card {
+        height: 344px;
+
+        &__image {
+            height: 200px;
+        }
+    }
+}

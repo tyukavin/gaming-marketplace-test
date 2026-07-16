@@ -56,6 +56,10 @@
             --service-border-color: #117fda;
         }
 
+        &--tiktok {
+            --service-border-color: #000;
+        }
+
         &--mobile-legends {
             --service-border-color: rgb(255 255 255 / 45%);
         }
@@ -72,13 +76,12 @@
 
         &:not(.services__service-button--more):is(:hover, :focus-visible) {
             .services__service-icon-wrapper {
-                background-color: var(--color-accent);
-                box-shadow: 0 4px 4px #d1d9e4;
+                border-color: var(--color-accent);
             }
 
             .services__service-icon {
-                border-width: 3px;
-                border-color: #fff;
+                border-color: transparent;
+                transform: scale(0.9);
             }
         }
 
@@ -98,12 +101,17 @@
         flex: 0 0 76px;
         width: 76px;
         height: 76px;
-        padding: 2px;
         background-color: var(--color-surface);
         border-radius: 16px;
-        transition:
-            background-color 180ms ease,
-            box-shadow 180ms ease;
+    }
+
+    &__service-icon-wrapper {
+        border: 2px solid transparent;
+        transition: border-color 180ms ease;
+    }
+
+    &__selected-icon-wrapper {
+        padding: 2px;
     }
 
     &__service-icon {
@@ -113,9 +121,10 @@
         border: 2px solid var(--service-border-color, #1482b3);
         border-radius: 16px;
         box-shadow: 0 4px 8px #d1d9e4;
+        transform-origin: center;
         transition:
             border-color 180ms ease,
-            border-width 180ms ease;
+            transform 180ms ease;
     }
 
     &__service-button--more &__service-icon-wrapper {
@@ -393,6 +402,62 @@
         &:focus-visible {
             outline: 2px solid #76829b;
             outline-offset: 3px;
+        }
+    }
+}
+
+@media (width <= 1199px) {
+    .services {
+        height: auto;
+
+        &__list {
+            justify-content: flex-start;
+            gap: 24px;
+            height: 132px;
+            padding: 4px 0 12px;
+            overflow: auto hidden;
+            overscroll-behavior-inline: contain;
+            scrollbar-width: thin;
+        }
+
+        &__item,
+        &__service-button {
+            flex: 0 0 76px;
+        }
+
+        &__payment-form {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            height: auto;
+        }
+
+        &__selected-service,
+        &__pay-button {
+            width: 100%;
+        }
+    }
+}
+
+@media (width <= 639px) {
+    .services {
+        padding: 16px;
+
+        &__payment-form {
+            grid-template-columns: 1fr;
+        }
+
+        &__selected-service {
+            min-width: 0;
+        }
+
+        &__selected-icon-wrapper {
+            flex-basis: 64px;
+            width: 64px;
+            height: 64px;
+        }
+
+        &__selected-icon-wrapper &__service-icon {
+            width: 60px;
+            height: 60px;
         }
     }
 }

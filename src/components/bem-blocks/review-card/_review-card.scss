@@ -133,3 +133,10 @@
         border-radius: 10px;
     }
 }
+
+@media (width <= 767px) {
+    .review-card {
+        height: auto;
+        min-height: 269px;
+    }
+}

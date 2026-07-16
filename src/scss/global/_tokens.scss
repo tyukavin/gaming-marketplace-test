@@ -12,6 +12,13 @@
     --shadow-card: 0 8px 13px rgb(15 23 42 / 6%);
     --radius-control: 10px;
     --radius-card: 18px;
+    --header-height: 80px;
     --content-width: 1200px;
     --page-width: 1280px;
+}
+
+@media (width <= 767px) {
+    :root {
+        --header-height: 124px;
+    }
 }
