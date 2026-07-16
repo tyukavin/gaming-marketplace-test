@@ -1,0 +1,125 @@
+.catalog-menu {
+    position: absolute;
+    z-index: 20;
+    top: 80px;
+    left: -40px;
+    display: grid;
+    grid-template-columns: 320px minmax(0, 1fr);
+    width: var(--page-width);
+    height: calc(100vh - 80px);
+    min-height: 640px;
+    padding-top: 16px;
+    overflow-y: auto;
+    background-color: var(--color-surface);
+    box-shadow: 0 18px 28px rgb(20 30 60 / 8%);
+
+    &[hidden] {
+        display: none;
+    }
+
+    &__sections {
+        height: 100%;
+        background-color: var(--color-surface);
+        border-right: 1px solid var(--color-border);
+    }
+
+    &__section-list,
+    &__link-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    &__section-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 48px;
+        padding-inline: 24px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        color: #363636;
+        text-decoration: none;
+
+        &--active {
+            font-weight: 600;
+            background-color: var(--color-page-background);
+        }
+
+        &:hover {
+            background-color: var(--color-page-background);
+        }
+
+        &:focus-visible {
+            position: relative;
+            z-index: 1;
+            outline: 2px solid #76829b;
+            outline-offset: -4px;
+        }
+    }
+
+    &__chevron {
+        margin-left: 16px;
+        font-size: 18px;
+        line-height: 18px;
+        color: #a0a8b5;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 24px;
+        align-content: start;
+        height: 100%;
+        padding: 32px 24px;
+        background-color: var(--color-surface);
+    }
+
+    &__title,
+    &__subtitle {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: 700;
+        color: #363636;
+    }
+
+    &__title {
+        margin-bottom: 16px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &__subtitle {
+        margin-top: 28px;
+        margin-bottom: 16px;
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    &__link-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    &__link {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        color: #4b5563;
+        text-decoration: none;
+
+        &:hover {
+            color: #000;
+        }
+
+        &:focus-visible {
+            outline: 2px solid #76829b;
+            outline-offset: 3px;
+            border-radius: 2px;
+        }
+    }
+}

@@ -1,4 +1,6 @@
 .site-header {
+    position: relative;
+    z-index: 10;
     width: var(--page-width);
     height: 80px;
     margin-inline: auto;
@@ -6,6 +8,7 @@
     box-shadow: inset 0 -1px #f2f4f7;
 
     &__container {
+        position: relative;
         display: flex;
         align-items: center;
         height: 100%;

@@ -2,10 +2,13 @@
     <div class="site-header__container container">
         <div class="site-header__logo" aria-hidden="true"></div>
 
-        <button class="site-header__catalog-button button-reset"
+        <button id="catalog-button"
+            class="site-header__catalog-button button-reset"
             type="button"
             aria-haspopup="true"
-            aria-expanded="false">
+            aria-expanded="false"
+            aria-controls="catalog-menu"
+            data-catalog-toggle>
             <img class="site-header__catalog-icon"
                 src="img/icons/catalog.svg"
                 width="20"
@@ -13,6 +16,8 @@
                 alt="">
             <span>Каталог</span>
         </button>
+
+        @@include('../bem-blocks/catalog-menu/_catalog-menu.html')
 
         <form class="site-header__search" role="search">
             <div class="site-header__search-field">
