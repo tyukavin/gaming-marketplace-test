@@ -20,9 +20,9 @@ export function initHeroSlider() {
         "(prefers-reduced-motion: reduce)",
     ).matches;
 
-    return new Swiper(swiperElement, {
+    const swiper = new Swiper(swiperElement, {
         modules: [A11y, Autoplay, EffectFade, Keyboard, Navigation, Pagination],
-        loop: true,
+        rewind: true,
         effect: "fade",
         fadeEffect: {
             crossFade: true,
@@ -33,7 +33,6 @@ export function initHeroSlider() {
             : {
                   delay: 5000,
                   disableOnInteraction: false,
-                  pauseOnMouseEnter: true,
               },
         keyboard: {
             enabled: true,
@@ -62,4 +61,28 @@ export function initHeroSlider() {
             slideLabelMessage: "{{index}} из {{slidesLength}}",
         },
     });
+
+    if (!prefersReducedMotion) {
+        const stopAutoplay = () => swiper.autoplay.stop();
+        const resumeAfterMouseLeave = () => {
+            if (!slider.contains(document.activeElement)) {
+                swiper.autoplay.start();
+            }
+        };
+        const resumeAfterFocusOut = (event) => {
+            if (
+                !slider.matches(":hover") &&
+                !slider.contains(event.relatedTarget)
+            ) {
+                swiper.autoplay.start();
+            }
+        };
+
+        slider.addEventListener("mouseenter", stopAutoplay);
+        slider.addEventListener("mouseleave", resumeAfterMouseLeave);
+        slider.addEventListener("focusin", stopAutoplay);
+        slider.addEventListener("focusout", resumeAfterFocusOut);
+    }
+
+    return swiper;
 }
